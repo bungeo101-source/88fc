@@ -30,7 +30,7 @@ function checkPassword() {
 /* 디스코드 버튼 */
 document.getElementById("discordBtn").onclick = function () {
   document.getElementById("bgm").play();
-  window.open("https://discord.gg/너의링크", "_blank");
+  window.open("https://discord.gg/9x4TUVS3WC", "_blank");
 };
 
 /* 🔥 불꽃 파티클 */
