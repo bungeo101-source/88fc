@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+/* 배경 */
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: -2;
+}
+
+/* 불꽃 파티클 */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#particles-js canvas {
+  filter: blur(1px);
+}
+
+/* 중앙 정렬 */
+.wrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 로고 */
+.logo-box {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.logo-box::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(255,0,0,0.15), transparent);
+  border-radius: 50%;
+  top: -10px;
+  left: -10px;
+  z-index: -1;
+}
+
+.logo {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(255,215,0,0.2);
+  box-shadow:
+    0 0 20px rgba(255,215,0,0.2),
+    0 0 60px rgba(255,0,0,0.1);
+}
+
+/* 인증 박스 */
+.auth-box {
+  display: flex;
+  gap: 10px;
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,215,0,0.2);
+  backdrop-filter: blur(10px);
+}
+
+input {
+  padding: 12px;
+  width: 240px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid gold;
+  color: gold;
+  outline: none;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+button {
+  padding: 12px 20px;
+  background: linear-gradient(145deg, #ffd700, #b89600);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ✅ 환영 애니메이션 (여기만 수정됨) */
+.cinematic {
+  font-size: 68px;
+  letter-spacing: 10px;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  /* 고급 느낌 그림자 */
+  text-shadow:
+    0 0 5px rgba(255,255,255,0.2),
+    0 0 20px rgba(255,0,0,0.2);
+
+  opacity: 0;
+  animation: cinematicFade 2.6s ease forwards;
+}
+
+.sub {
+  text-align: center;
+  letter-spacing: 5px;
+  color: gold;
+  margin-top: 10px;
+  animation: fadeIn 2s;
+}
+
+/* ✔ 새 애니메이션 (자연스럽고 안깨짐) */
+@keyframes cinematicFade {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    letter-spacing: 20px;
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 10px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* 로딩 */
+.line {
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, red, gold);
+  animation: load 2s forwards;
+}
+
+@keyframes load {
+  to { width: 300px; }
+}
+
+/* 디스코드 버튼 */
+#discordBtn {
+  margin-top: 30px;
+  padding: 15px 50px;
+  font-size: 18px;
+  background: transparent;
+  color: white;
+  border: 2px solid #ff0000;
+  border-radius: 12px;
+  letter-spacing: 3px;
+  transition: 0.3s;
+}
+
+#discordBtn:hover {
+  color: #ff0000;
+  box-shadow:
+    0 0 10px #ff0000,
+    0 0 30px #ff0000,
+    0 0 60px #ff0000;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>88FC</title>
+
+  <!-- 스타일 -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 파티클 -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
+<body>
+
+<div class="bg"></div>
+<div id="particles-js"></div>
+
+<div class="wrapper">
+
+  <!-- 로고 -->
+  <div class="logo-box">
+    <img src="bg.png" class="logo">
+  </div>
+
+  <!-- 인증 -->
+  <div id="authBox" class="auth-box">
+    <input type="password" id="password" placeholder="접속 코드 입력">
+    <button onclick="checkPassword()">입장</button>
+  </div>
+
+  <!-- 환영 -->
+  <div id="welcome" class="hidden">
+    <h1 class="cinematic">입장 승인</h1>
+    <p class="sub">88 FIGHT LEAGUE</p>
+  </div>
+
+  <!-- 로딩 -->
+  <div id="loading" class="hidden">
+    <div class="line"></div>
+  </div>
+
+  <!-- 디스코드 -->
+  <div id="discordBox" class="hidden">
+    <button id="discordBtn">경기장 입장</button>
+  </div>
+
+</div>
+
+<audio id="bgm" src="music.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
